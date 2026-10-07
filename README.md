@@ -137,6 +137,15 @@ npm test
 - **Animations.** Three small primitives (`ScalePressable`, `FadeInView`, `FadeInImage`) built on React Native's `Animated` with `useNativeDriver: true`, so every animation (opacity / transform only) runs off the JS thread and stays smooth during fetches. Grid thumbnails use TheMealDB's `/medium` variant (~30 KB vs ~125 KB) with a fallback to the full image.
 - **Theming.** Colours live in two palettes (`lightColors`, `darkColors`); `useThemedStyles(makeStyles)` memoises a `StyleSheet` per scheme, so no component duplicates styles for dark mode.
 
+## Assumptions
+
+- TheMealDB's free tier (test key `1`) is sufficient; no authentication or rate-limit handling is needed for this scope.
+- An internet connection is available. Failures show a retry state; there is no offline cache.
+- Favourites are device-local only (AsyncStorage). No accounts or cross-device sync.
+- The first category returned by the API is a sensible default selection on launch.
+- Ingredient names and measurements are shown exactly as the API provides them (no unit normalisation or translation).
+- Developed and verified on a physical Android device (see screenshots). The iOS project is the standard React Native CLI template and was not separately verified on a Mac.
+
 ## Trade-offs
 
 This was a 3–4 hour machine test; the priority was core requirements done well and code that is easy to maintain and explain.
