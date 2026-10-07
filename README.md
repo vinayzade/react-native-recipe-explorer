@@ -4,6 +4,16 @@
 
 Recipe Explorer is a React Native (CLI, no Expo) app built as a 3–4 hour machine test. It browses recipes from the free [TheMealDB](https://www.themealdb.com/api.php) API: filter by category, search by name, open a detail page with ingredients, instructions and a YouTube link, and save favourites locally.
 
+## Screenshots
+
+| Home | Loading | Favourites |
+|:---:|:---:|:---:|
+| <img src="screenshots/home.jpg" width="250" alt="Home screen with category chips and meal grid" /> | <img src="screenshots/home-loading.jpg" width="250" alt="Home screen while fetching fresh recipes" /> | <img src="screenshots/favourites.jpg" width="250" alt="Favourites tab with saved recipes" /> |
+
+| Meal Detail | Meal Detail |
+|:---:|:---:|
+| <img src="screenshots/detail-burgers.jpg" width="250" alt="Detail screen for chicken and halloumi burgers" /> | <img src="screenshots/detail-pate.jpg" width="250" alt="Detail screen for chicken liver pate" /> |
+
 ## Features
 
 - Debounced recipe search (500 ms) that overrides the category grid while active
